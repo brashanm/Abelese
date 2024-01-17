@@ -16,4 +16,3 @@ Abelese, a unique and immersive iOS application, was inspired by a simple desire
 ## How it's Built
 Abelese is the result of meticulous development in Swift and SwiftUI, leveraging the power of Firebase for real-time updates and data storage. The Cloud Firestore database forms the backbone, housing an extensive collection of The Weeknd's songs. The integration of the LibreTranslate API allows users to dynamically translate lyrics, ensuring a personalized and inclusive experience.
 
-## Demo
