@@ -2,7 +2,7 @@
 
 ![Abelese Demo](https://github.com/brashanm/Abelese/assets/97188295/7736c731-76f4-451b-8029-9f54b8b04499)
 
-# Overview
+## Overview
 Abelese is not just another music app; it's an immersive experience designed to bridge linguistic gaps and amplify the global accessibility of The Weeknd's soulful lyrics. Born out of a desire to connect with my cousin, who struggled to comprehend the poetic beauty of The Weeknd's songs due to a language barrier, Abelese seamlessly integrates technology to transcend borders.
 
 ## Inspiration
