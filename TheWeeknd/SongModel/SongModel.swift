@@ -2,7 +2,7 @@
 //  Song.swift
 //  TheWeeknd
 //
-//  Created by Brashan Mohanakumar on 2023-12-15.
+//  Created by Arvind Sivaram on 2023-12-15.
 //
 
 import Foundation

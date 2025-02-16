@@ -101,8 +101,14 @@ struct ContentView: View {
                 }
             )
         }
-        .task {
-            await viewModel.getData()
+        .onAppear {
+            // Subscribe to the Combine publisher from getData()
+            viewModel.getData()
+                .sink { _ in
+                    // You could handle completion or errors in separate closures,
+                    // but for now, we’ll simply do nothing on success.
+                }
+                .store(in: &viewModel.cancellables)
         }
     }
 }

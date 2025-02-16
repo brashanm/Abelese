@@ -77,9 +77,14 @@ struct SongPageView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .onChange(of: viewModel.selection) { oldValue, newValue in
                             if let code = viewModel.languages[newValue] {
-                                Task {
-                                    viewModel.translatedSong = await viewModel.translateSong(song: song, language: code)
-                                }
+                                // Combine-based translation
+                                viewModel.translateSong(song: song, language: code)
+                                    .receive(on: DispatchQueue.main)
+                                    .sink { translated in
+                                        viewModel.translatedSong = translated
+                                    }
+                                    .store(in: &viewModel.cancellables)
+                                
                                 print(viewModel.languages.count)
                             }
                         }
@@ -114,8 +119,14 @@ struct SongPageView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             )
         }
-        .task {
-            await viewModel.getLanguages()
+        .onAppear {
+            viewModel.getLanguages()
+                .receive(on: DispatchQueue.main)
+                .sink { _ in
+                    // We do nothing on success;
+                    // the languages dictionary gets updated in SongPageViewModel
+                }
+                .store(in: &viewModel.cancellables)
         }
     }
 }

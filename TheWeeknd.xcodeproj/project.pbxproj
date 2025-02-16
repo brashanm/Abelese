@@ -41,7 +41,7 @@
 		4283B2B72B2D2DC0008CDCF9 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4283B2B62B2D2DC0008CDCF9 /* FirebaseRemoteConfigSwift */; };
 		4283B2B92B2D2DC0008CDCF9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4283B2B82B2D2DC0008CDCF9 /* FirebaseStorage */; };
 		4283B2BB2B2D2DC0008CDCF9 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4283B2BA2B2D2DC0008CDCF9 /* FirebaseStorageCombine-Community */; };
-		4283B2BF2B2D3E37008CDCF9 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283B2BE2B2D3E37008CDCF9 /* Song.swift */; };
+		4283B2BF2B2D3E37008CDCF9 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283B2BE2B2D3E37008CDCF9 /* SongModel.swift */; };
 		4283B2C62B2D416C008CDCF9 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4283B2C52B2D416C008CDCF9 /* FLAnimatedImage */; };
 		4283B2C82B2D4962008CDCF9 /* Cartier.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4283B2C72B2D4962008CDCF9 /* Cartier.ttf */; };
 		4283B2CD2B2D518B008CDCF9 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283B2CC2B2D518B008CDCF9 /* SongListView.swift */; };
@@ -57,7 +57,7 @@
 		4283B2792B2D2C35008CDCF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4283B27C2B2D2C35008CDCF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4283B2832B2D2D5B008CDCF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4283B2BE2B2D3E37008CDCF9 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		4283B2BE2B2D3E37008CDCF9 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		4283B2C72B2D4962008CDCF9 /* Cartier.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cartier.ttf; sourceTree = "<group>"; };
 		4283B2C92B2D4972008CDCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4283B2CC2B2D518B008CDCF9 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		42D65BB42B351A6B003F805D /* SongModel */ = {
 			isa = PBXGroup;
 			children = (
-				4283B2BE2B2D3E37008CDCF9 /* Song.swift */,
+				4283B2BE2B2D3E37008CDCF9 /* SongModel.swift */,
 			);
 			path = SongModel;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 				42D65BB02B350E4C003F805D /* ContentViewModel.swift in Sources */,
 				4283B2CF2B2D598B008CDCF9 /* SongPageView.swift in Sources */,
 				4228D7F12B2E72FB00982426 /* SongPageViewModel.swift in Sources */,
-				4283B2BF2B2D3E37008CDCF9 /* Song.swift in Sources */,
+				4283B2BF2B2D3E37008CDCF9 /* SongModel.swift in Sources */,
 				4283B2782B2D2C34008CDCF9 /* ContentView.swift in Sources */,
 				4283B2762B2D2C34008CDCF9 /* TheWeekndApp.swift in Sources */,
 				4283B2CD2B2D518B008CDCF9 /* SongListView.swift in Sources */,
