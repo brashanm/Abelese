@@ -77,7 +77,6 @@ struct SongPageView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .onChange(of: viewModel.selection) { oldValue, newValue in
                             if let code = viewModel.languages[newValue] {
-                                // Combine-based translation
                                 viewModel.translateSong(song: song, language: code)
                                     .receive(on: DispatchQueue.main)
                                     .sink { translated in
@@ -123,8 +122,6 @@ struct SongPageView: View {
             viewModel.getLanguages()
                 .receive(on: DispatchQueue.main)
                 .sink { _ in
-                    // We do nothing on success;
-                    // the languages dictionary gets updated in SongPageViewModel
                 }
                 .store(in: &viewModel.cancellables)
         }

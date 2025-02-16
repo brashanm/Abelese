@@ -16,15 +16,12 @@ final class ContentViewModel: ObservableObject {
     @Published var showcaseSongs: Bool = false
     @Published var songs = [Song]()
     
-    // Storage for Combine subscriptions
     var cancellables = Set<AnyCancellable>()
     
-    // Used to determine offset of views
     var toTop: CGFloat {
         showcaseSongs ? 75 : -125
     }
     
-    // Filtered search results
     var filteredStuff: [Song] {
         guard !search.isEmpty else {
             return songs
@@ -36,13 +33,11 @@ final class ContentViewModel: ObservableObject {
         }
     }
     
-    // Wrap Firestore's getDocuments in a Combine Future
     func getData() -> AnyPublisher<Void, Never> {
         Future { [weak self] promise in
             let db = Firestore.firestore()
             db.collection("songs").getDocuments { snapshot, error in
                 if let error = error {
-                    // Handle errors; for simplicity, we use fatalError as in your code
                     print("Error: \(error)")
                     fatalError()
                 }
@@ -51,7 +46,6 @@ final class ContentViewModel: ObservableObject {
                     return
                 }
                 
-                // Parse the data and update on the main thread
                 DispatchQueue.main.async {
                     self?.songs = snapshot.documents.map { doc in
                         Song(
