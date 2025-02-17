@@ -58,10 +58,8 @@ final class ContentViewModel: ObservableObject {
                         )
                     }
 
-                    // 1) Update your in-memory array if desired
                     self?.songs = fetchedSongs
                     
-                    // 2) Persist these songs to Core Data
                     self?.saveSongsToCoreData(songs: fetchedSongs)
 
                     promise(.success(()))
@@ -77,7 +75,6 @@ final class ContentViewModel: ObservableObject {
         
         do {
             let entities = try context.fetch(request)
-            // Convert each SongEntity into a Song struct
             self.songs = entities.map { $0.toSong() }
         } catch {
             print("Error fetching songs from Core Data: \(error)")
@@ -89,7 +86,6 @@ final class ContentViewModel: ObservableObject {
         let context = PersistenceController.shared.container.viewContext
 
         for song in songs {
-            // 1) Check if this song already exists in Core Data (by `id`)
             let request: NSFetchRequest<SongEntity> = SongEntity.fetchRequest()
             request.predicate = NSPredicate(format: "id == %@", song.id ?? "")
 
@@ -101,7 +97,6 @@ final class ContentViewModel: ObservableObject {
                 existingEntity = nil
             }
 
-            // 2) If it exists, update it; otherwise create a new one
             if let entity = existingEntity {
                 entity.configure(from: song, in: context)
             } else {
@@ -110,7 +105,6 @@ final class ContentViewModel: ObservableObject {
             }
         }
 
-        // 3) Save the context
         do {
             try context.save()
         } catch {

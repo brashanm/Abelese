@@ -20,7 +20,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct TheWeekndApp: App {
-  // register app delegate for Firebase setup
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
 
