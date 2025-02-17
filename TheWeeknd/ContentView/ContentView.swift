@@ -12,6 +12,11 @@ import FirebaseFirestoreSwift
 struct ContentView: View {
     @FocusState private var clicked: Bool
     @StateObject private var viewModel = ContentViewModel()
+    @FetchRequest(
+        sortDescriptors: [],
+        animation: .default
+    )
+    private var songEntities: FetchedResults<SongEntity>
     var body: some View {
         NavigationStack {
             VStack {
@@ -103,8 +108,7 @@ struct ContentView: View {
         }
         .onAppear {
             viewModel.getData()
-                .sink { _ in
-                }
+                .sink { _ in }
                 .store(in: &viewModel.cancellables)
         }
     }

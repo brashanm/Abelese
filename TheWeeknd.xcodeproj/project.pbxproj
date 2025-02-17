@@ -46,6 +46,8 @@
 		4283B2C82B2D4962008CDCF9 /* Cartier.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4283B2C72B2D4962008CDCF9 /* Cartier.ttf */; };
 		4283B2CD2B2D518B008CDCF9 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283B2CC2B2D518B008CDCF9 /* SongListView.swift */; };
 		4283B2CF2B2D598B008CDCF9 /* SongPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283B2CE2B2D598B008CDCF9 /* SongPageView.swift */; };
+		429821942D62922A0072FE2F /* SongModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 429821922D62922A0072FE2F /* SongModel.xcdatamodeld */; };
+		42A24DF02D62E34C00D7A3CE /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A24DEF2D62E34C00D7A3CE /* PersistenceController.swift */; };
 		42D65BB02B350E4C003F805D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D65BAF2B350E4C003F805D /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		4283B2C92B2D4972008CDCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4283B2CC2B2D518B008CDCF9 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 		4283B2CE2B2D598B008CDCF9 /* SongPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongPageView.swift; sourceTree = "<group>"; };
+		429821932D62922A0072FE2F /* SongModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SongModel.xcdatamodel; sourceTree = "<group>"; };
+		42A24DEF2D62E34C00D7A3CE /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		42D65BAF2B350E4C003F805D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +128,7 @@
 		4283B2742B2D2C34008CDCF9 /* TheWeeknd */ = {
 			isa = PBXGroup;
 			children = (
+				429821922D62922A0072FE2F /* SongModel.xcdatamodeld */,
 				42D65BB12B3519C6003F805D /* ContentView */,
 				42D65BB22B3519D7003F805D /* SongPageView */,
 				42D65BB42B351A6B003F805D /* SongModel */,
@@ -133,6 +138,7 @@
 				4283B2832B2D2D5B008CDCF9 /* GoogleService-Info.plist */,
 				4283B2792B2D2C35008CDCF9 /* Assets.xcassets */,
 				4283B27B2B2D2C35008CDCF9 /* Preview Content */,
+				42A24DEF2D62E34C00D7A3CE /* PersistenceController.swift */,
 			);
 			path = TheWeeknd;
 			sourceTree = "<group>";
@@ -288,12 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A24DF02D62E34C00D7A3CE /* PersistenceController.swift in Sources */,
 				42D65BB02B350E4C003F805D /* ContentViewModel.swift in Sources */,
 				4283B2CF2B2D598B008CDCF9 /* SongPageView.swift in Sources */,
 				4228D7F12B2E72FB00982426 /* SongPageViewModel.swift in Sources */,
 				4283B2BF2B2D3E37008CDCF9 /* SongModel.swift in Sources */,
 				4283B2782B2D2C34008CDCF9 /* ContentView.swift in Sources */,
 				4283B2762B2D2C34008CDCF9 /* TheWeekndApp.swift in Sources */,
+				429821942D62922A0072FE2F /* SongModel.xcdatamodeld in Sources */,
 				4283B2CD2B2D518B008CDCF9 /* SongListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,6 +686,19 @@
 			productName = FLAnimatedImage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		429821922D62922A0072FE2F /* SongModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				429821932D62922A0072FE2F /* SongModel.xcdatamodel */,
+			);
+			currentVersion = 429821932D62922A0072FE2F /* SongModel.xcdatamodel */;
+			path = SongModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4283B26A2B2D2C34008CDCF9 /* Project object */;
 }
